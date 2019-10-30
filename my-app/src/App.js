@@ -8,19 +8,19 @@ import './App.css'
 
 class App extends React.Component {
   state={
-    card: []
+    movies: []
   }
 
-  handleData = () => {
-    this.setState({ card : this.state.data })
-  }
+  // handleSearchMovies = () => {
+  //   this.setState({ movies :  })
+  // }
 
   render() {
     return (
       <div className="headDiv">
         <Header />
-        <SearchBar data={this.state.data}/>
-        {/* <MoviesList /> */}
+        <SearchBar />
+        <MoviesList />
       </div>
     );
   }
