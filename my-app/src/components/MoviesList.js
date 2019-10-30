@@ -1,5 +1,6 @@
 import React from 'react';
-import CardMovie from './CardMovie'
+import CardMovie from './CardMovie';
+
 import axios from 'axios';
 
 class MoviesList extends React.Component {
@@ -18,7 +19,6 @@ class MoviesList extends React.Component {
   }
 
   render () {
-    console.log("this.state.movies", this.state.movies)
     return(
       <div className ="App"> 
         <div className="movie"> 

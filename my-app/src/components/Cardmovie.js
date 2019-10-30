@@ -5,13 +5,14 @@ import './CardMovie.css';
 const CardMovie = ({ movie }) => {
   return (
     <div containerCard>
-      <img className="imgCharacter"
+      <img 
+        className="imgCharacter"
         src={movie.posterUrl}/>
         <p>
-        Movie:{movie.title}<br/>
-        Director : {movie.director} <br/> 
-        Year : {movie.year}  <br/>
-        Country : {movie.country}
+          Movie:{movie.title}<br/>
+          Director : {movie.director} <br/> 
+          Year : {movie.year}  <br/>
+          Country : {movie.country}
         </p>
     </div>
   )

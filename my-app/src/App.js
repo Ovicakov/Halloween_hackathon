@@ -6,14 +6,25 @@ import MoviesList from './components/MoviesList';
 import './App.css'
 
 
-function App() {
-  return (
-    <div className="headDiv">
-      <Header className="header"/>
-      <SearchBar className="searchBar"/>
-      <MoviesList />
-    </div>
-  );
+class App extends React.Component {
+  state={
+    card: []
+  }
+
+  handleData = () => {
+    this.setState({ card : this.state.data })
+  }
+
+  render() {
+    return (
+      <div className="headDiv">
+        <Header />
+        <SearchBar data={this.state.data}/>
+        {/* <MoviesList /> */}
+      </div>
+    );
+  }
 }
+  
 
 export default App;
