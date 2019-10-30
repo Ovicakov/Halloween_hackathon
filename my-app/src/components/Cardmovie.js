@@ -1,8 +1,8 @@
 
 import React from 'react';
-import './Cardmovie.css';
+import './CardMovie.css';
 
-const Cardmovie = ({ movie }) => {
+const CardMovie = ({ movie }) => {
   return (
     <div containerCard>
       <img className="imgCharacter"
@@ -17,6 +17,6 @@ const Cardmovie = ({ movie }) => {
   )
 }
 
-export default Cardmovie
+export default CardMovie
 
 

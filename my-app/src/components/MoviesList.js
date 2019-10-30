@@ -1,5 +1,5 @@
 import React from 'react';
-import Cardmovie from './Cardmovie'
+import CardMovie from './CardMovie'
 import axios from 'axios';
 
 class MoviesList extends React.Component {
@@ -23,7 +23,7 @@ class MoviesList extends React.Component {
       <div className ="App"> 
         <div className="movie"> 
           {this.state.movies.map(
-          movie =>( <Cardmovie movie={movie} key={movie.id} /> ))}
+          movie =>( <CardMovie movie={movie} key={movie.id} /> ))}
         </div>
       </div>
     )
