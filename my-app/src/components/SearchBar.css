@@ -1,0 +1,20 @@
+.search {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchTerm {
+  width: 20em;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.searchButton {
+  height: 2em;
+  width: 10em;
+}
+
+
