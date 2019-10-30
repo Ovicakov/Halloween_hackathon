@@ -1,0 +1,10 @@
+.containerCard{
+    margin: auto;
+    width: 100px;
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+    margin-top:15em;
+
+}
