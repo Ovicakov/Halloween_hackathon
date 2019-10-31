@@ -10,6 +10,12 @@
   width: 20em;
   position: relative;
   margin-bottom: 1em;
+  border: 2px #d40000 solid;
+  margin: 5px 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .searchButton {
