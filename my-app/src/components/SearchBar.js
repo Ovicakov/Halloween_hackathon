@@ -44,7 +44,7 @@ class SearchBar extends React.Component {
           placeholder="Which movies are you looking for ?"
           onChange={this.onSearchChange}
         />
-        <button type="submit" class="searchButton" onClick={this.getMovie}>Movie me !</button>
+        <button type="submit" class="searchButton" onClick={this.onSearchChange}>Movie me !</button>
         
 
         <div className ="ItemsMovies"> 
