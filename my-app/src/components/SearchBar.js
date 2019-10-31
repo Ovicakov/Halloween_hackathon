@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
       this.setState({movies : []})
     }  else {
         axios
-          .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
+          .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`)
           .then((res) => {
             this.setState({movies : res.data.movies, isLoaded: true })
             return res
@@ -74,7 +74,7 @@ class SearchBar extends React.Component {
             <div className ="ItemsMoviesDisplayed"> 
               <div className="movie"> 
                 {this.state.movies.map(
-                movie =>( <CardMovie movie={movie} key={movie.id} /> ))}
+                movie =>( <CardMovie className="cardMovie" movie={movie} key={movie.id} />))} 
               </div>
             </div>
             :

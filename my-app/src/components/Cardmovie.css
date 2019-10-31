@@ -1,17 +1,47 @@
+@font-face {
+  font-family: 'shlop';
+  src:url('./font/shlop.ttf')
+}
+
 .containerCard{
-  display: block;
-  width: 375px;
-  height: 677px;
   background: #ffffff;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   padding: 70px 30px 0;
   position: absolute;
   left: 50%;
   top: 50%;
+  display:flex;
+  flex-wrap: wrap;
 }
-.movie {
-    display: flex;
-    flex-direction: column;
-    margin-top:15em;
 
+.movie {
+  display: flex;
+  margin-top:5em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  margin: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.cardMovie {
+  margin: 10px;
+  display: flex;
+}
+
+p {
+  margin: 10px;
+  text-align: center;
+}
+
+.titleMovie {
+  margin: 10px;
+  font-family: 'shlop';
+  font-size: 2em;
+  text-align: center;
+  color:rgb(182, 33, 33);
 }
