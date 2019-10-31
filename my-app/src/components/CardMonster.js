@@ -10,8 +10,7 @@ const CardMonster = ({ monster }) => {
         className="imgCharacter"
         src={monster.picture}/>
         <p>Name :{monster.name}</p>
-        <p>Description : {monster.description} </p> 
-        <p>Special: {monster.special}  </p>
+
     </div>
   )
 }
