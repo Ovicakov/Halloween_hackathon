@@ -8,7 +8,8 @@ import './SearchBar.css';
 class SearchBar extends React.Component {
   state={
     searchText:'',
-    movies: []
+    movies: [],
+    isClicked: false
   }
 
   getMovie = () => {
@@ -21,21 +22,24 @@ class SearchBar extends React.Component {
     if(event.target.value.length === 0){
       this.setState({movies : []})
     } else {
-      axios
-        .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
-        .then((res) => {
-          this.setState({movies : res.data.movies }  )
-          return res
-        }) 
-        .then((res) => {
-          this.props.searchMovies(res)
-        })
-    }
+        axios
+          .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
+          .then((res) => {
+            this.setState({movies : res.data.movies, isLoaded: true })
+            return res
+          }) 
+          .then((res) => {
+            this.props.searchMovies(res)
+            return res
+          })
+      }
+  }
+
+  clickedFunction = () => {
+    this.setState({ isClicked: !this.state.isClicked})
   }
 
   render() {
- console.log(this.props.movies)
-    
     return(
       <div class="search">
         <input 
@@ -44,18 +48,23 @@ class SearchBar extends React.Component {
           placeholder="Which movies are you looking for ?"
           onChange={this.onSearchChange}
         />
-        <button type="submit" class="searchButton" onClick={this.getMovie}>Movie me !</button>
-        
 
-        <div className ="ItemsMovies"> 
-        <div className="movie"> 
-          {this.state.movies.map(
-          movie =>( <CardMovie movie={movie} key={movie.id} /> ))}
-        </div>
+        <button 
+          type="button" 
+          class="searchButton" onClick={this.clickedFunction}>{this.state.isClicked ? 'Delete movies' : 'Show movies'}</button>
+          {
+            this.state.isClicked 
+            ?
+            <div className ="ItemsMoviesDisplayed"> 
+              <div className="movie"> 
+                {this.state.movies.map(
+                movie =>( <CardMovie movie={movie} key={movie.id} /> ))}
+              </div>
+            </div>
+            :
+            ''
+          }
       </div>
-
-      </div>
-       
     )
   }
 }

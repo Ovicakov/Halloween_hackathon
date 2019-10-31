@@ -20,8 +20,6 @@ class App extends React.Component {
       <div className="headDiv">
         <Header />
         <SearchBar searchMovies={this.handleSearchMovies} />
-        
-
       </div>
     );
   }

@@ -18,6 +18,10 @@
 }
 
 
-.ItemsMovies {
-  display: hidden;
+.ItemsMoviesNone {
+  display: none;
+}
+
+.ItemsMoviesDisplayed {
+  display: flex;
 }
