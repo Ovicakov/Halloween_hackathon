@@ -25,9 +25,9 @@ class App extends React.Component {
     
     return (
       <div className="headDiv">
-        <Header />
-        <MonsterList clicked={this.state.clicked}/>
-        <SearchBar searchMovies={this.handleSearchMovies} clickedField={this.handleClickedField}/>
+        <Header className='header' />
+        <MonsterList className='kik' clicked={this.state.clicked}/>
+        <SearchBar className='Searchbar' searchMovies={this.handleSearchMovies} clickedField={this.handleClickedField}/>
 
       </div>
     );

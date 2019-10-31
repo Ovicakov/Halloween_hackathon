@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import CardMonster from './CardMonster'
+import  './MonsterList.css'
 import './Monster'
 
 class MonsterList extends React.Component {

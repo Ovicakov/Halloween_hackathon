@@ -1,0 +1,10 @@
+.monster{
+    /* width:auto;
+    margin-left:45%;
+    margin-top:35%;
+    z-index: 2; */
+    display:flex;
+    justify-content: center;
+    margin-bottom: 150px;
+   
+}

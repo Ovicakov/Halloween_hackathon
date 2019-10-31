@@ -5,11 +5,11 @@ const CardMonster = ({ monster }) => {
   // console.log('monster', monster);
   
   return (
-    <div containerCard>
+    <div className='kik'>
       <img 
         className="imgCharacter"
         src={monster.picture}/>
-        <p>Name :{monster.name}</p>
+      
 
     </div>
   )
