@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import CardMovie from './Cardmovie';
+import Beep from './fouet.mp3'
 
 import './SearchBar.css';
 
@@ -43,9 +44,12 @@ class SearchBar extends React.Component {
 
   clickedFunction = () => {
     this.setState({ isClicked: !this.state.isClicked})
+    const audio = new Audio(Beep)
+    return ( audio.play())
   }
 
   render() {
+
     return(
       <div class="search">
         <div onCLick={this.handleClick}>
@@ -76,9 +80,14 @@ class SearchBar extends React.Component {
             :
             ''
           }
+
+
+
+
       </div>
     )
   }
 }
 
 export default SearchBar
+
