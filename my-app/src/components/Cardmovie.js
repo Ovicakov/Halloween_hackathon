@@ -4,7 +4,7 @@ import './Cardmovie.css';
 
 const CardMovie = ({ movie }) => {
   return (
-    <div containerCard>
+    <div className="container">
       <img 
         className="imgCharacter"
         src={movie.posterUrl}/>

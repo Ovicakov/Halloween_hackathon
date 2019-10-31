@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
       this.setState({movies : []})
     } else {
         axios
-          .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
+          .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`)
           .then((res) => {
             this.setState({movies : res.data.movies, isLoaded: true })
             return res
@@ -42,6 +42,7 @@ class SearchBar extends React.Component {
   render() {
     return(
       <div class="search">
+
         <input 
           type="text" 
           class="searchTerm" 
@@ -52,13 +53,14 @@ class SearchBar extends React.Component {
         <button 
           type="button" 
           class="searchButton" onClick={this.clickedFunction}>{this.state.isClicked ? 'Delete movies' : 'Show movies'}</button>
+          
           {
             this.state.isClicked 
             ?
             <div className ="ItemsMoviesDisplayed"> 
               <div className="movie"> 
                 {this.state.movies.map(
-                movie =>( <CardMovie movie={movie} key={movie.id} /> ))}
+                movie =>( <CardMovie className="cardMovie" movie={movie} key={movie.id} />))} 
               </div>
             </div>
             :
