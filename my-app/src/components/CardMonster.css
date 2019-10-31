@@ -2,12 +2,12 @@
     width:150px;
    
 }
-.imgCharacter{
+.imgCharacterMonster{
     margin: 0 auto;
     border: 1px solid
     #50597b;
     width: 150px;
     height: 150px;
-    border-radius: 120%;
+    border-radius: 100%;
     
 }

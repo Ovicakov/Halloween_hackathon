@@ -7,7 +7,7 @@ const CardMonster = ({ monster }) => {
   return (
     <div className='kik'>
       <img 
-        className="imgCharacter"
+        className="imgCharacterMonster"
         src={monster.picture}/>
       
 
