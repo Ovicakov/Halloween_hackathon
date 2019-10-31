@@ -1,5 +1,5 @@
 import React from 'react';
-import CardMovie from './CardMovie';
+import CardMovie from './Cardmovie';
 
 import axios from 'axios';
 

@@ -1,6 +1,13 @@
 .containerCard{
-    margin: auto;
-    width: 100px;
+  display: block;
+  width: 375px;
+  height: 677px;
+  background: #ffffff;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  padding: 70px 30px 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 .movie {
     display: flex;

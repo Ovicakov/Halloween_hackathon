@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import CardMovie from './Cardmovie';
+
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
@@ -12,19 +14,27 @@ class SearchBar extends React.Component {
   getMovie = () => {
     axios
       .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${this.state.searchText}`) 
-      .then(res => this.setState({movies : res.data.movies}, _=>{console.log(res);
-      }))
+      .then(res => this.setState({movies : res.data.movies}))
   }
 
   onSearchChange = event => {
-    axios
-    .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
-    .then(res => this.setState({movies : res.data.movies}, _=>{console.log(res);
-    }))
+    if(event.target.value.length === 0){
+      this.setState({movies : []})
+    } else {
+      axios
+        .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
+        .then((res) => {
+          this.setState({movies : res.data.movies }  )
+          return res
+        }) 
+        .then((res) => {
+          this.props.searchMovies(res)
+        })
+    }
   }
 
   render() {
-    console.log(this.state);
+ console.log(this.props.movies)
     
     return(
       <div class="search">
@@ -36,7 +46,16 @@ class SearchBar extends React.Component {
         />
         <button type="submit" class="searchButton" onClick={this.getMovie}>Movie me !</button>
         
+
+        <div className ="ItemsMovies"> 
+        <div className="movie"> 
+          {this.state.movies.map(
+          movie =>( <CardMovie movie={movie} key={movie.id} /> ))}
+        </div>
       </div>
+
+      </div>
+       
     )
   }
 }
