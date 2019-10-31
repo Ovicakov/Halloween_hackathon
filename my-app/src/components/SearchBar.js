@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
   onSearchChange = event => {
     if(event.target.value.length === 0){
       this.setState({movies : []})
-    } else {
+    }  else {
         axios
           .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${event.target.value}`) 
           .then((res) => {
@@ -35,6 +35,12 @@ class SearchBar extends React.Component {
       }
   }
 
+  handleClick = () => {
+    console.log('lkjsgh');
+    
+    this.props.clickedField()
+  }
+
   clickedFunction = () => {
     this.setState({ isClicked: !this.state.isClicked})
   }
@@ -42,16 +48,22 @@ class SearchBar extends React.Component {
   render() {
     return(
       <div class="search">
+        <div onCLick={this.handleClick}>
+
         <input 
           type="text" 
           class="searchTerm" 
           placeholder="Which movies are you looking for ?"
           onChange={this.onSearchChange}
+          onClick={this.handleClick}
         />
+        </div>
 
         <button 
           type="button" 
-          class="searchButton" onClick={this.clickedFunction}>{this.state.isClicked ? 'Delete movies' : 'Show movies'}</button>
+          class="searchButton" onClick={this.clickedFunction}>{this.state.isClicked ? 'Delete movies' : 'Show movies'}
+        </button>
+
           {
             this.state.isClicked 
             ?

@@ -2,6 +2,8 @@ import React from 'react';
 import './CardMonster.css';
 
 const CardMonster = ({ monster }) => {
+  // console.log('monster', monster);
+  
   return (
     <div containerCard>
       <img 
