@@ -28,7 +28,7 @@ class App extends React.Component {
         <Header className='header' />
         <MonsterList className='kik' clicked={this.state.clicked}/>
         <SearchBar className='Searchbar' searchMovies={this.handleSearchMovies} clickedField={this.handleClickedField}/>
-
+     
       </div>
     );
   }
