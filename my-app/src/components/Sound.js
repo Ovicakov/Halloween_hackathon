@@ -1,4 +1,4 @@
-inport React from 'react'
+import React from 'react'
 
 class Sound extends Component {
     render() {
@@ -13,4 +13,4 @@ class Sound extends Component {
     }
   }
   
-  export default Sounds
+  export default Sound

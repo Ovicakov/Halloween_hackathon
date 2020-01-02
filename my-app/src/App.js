@@ -21,14 +21,12 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('app' ,this.state);
     
     return (
       <div className="headDiv">
-        <Header className='header' />
+        <Header className='header'/>
         <MonsterList className='kik' clicked={this.state.clicked}/>
         <SearchBar className='Searchbar' searchMovies={this.handleSearchMovies} clickedField={this.handleClickedField}/>
-     
       </div>
     );
   }

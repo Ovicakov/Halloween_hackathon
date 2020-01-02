@@ -9,8 +9,6 @@ const CardMonster = ({ monster }) => {
       <img 
         className="imgCharacterMonster"
         src={monster.picture}/>
-      
-
     </div>
   )
 }
