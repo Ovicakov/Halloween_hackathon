@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 
 import CardMovie from './Cardmovie';
-import Beep from './fouet.mp3';
 import Laugh from './laugh.mp3';
 
 import './SearchBar.css';
@@ -18,6 +17,7 @@ class SearchBar extends React.Component {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
+  //------- GET MOVIES DATA -----------
   // getMovie = () => {
   //   axios
   //     .get(`https://hackathon-wild-hackoween.herokuapp.com/movies/search/title/${this.state.searchText}`)
@@ -51,8 +51,6 @@ class SearchBar extends React.Component {
     const audio = new Audio(Laugh)
     return (audio.play())
   }
-
-
 
   render() {
     
